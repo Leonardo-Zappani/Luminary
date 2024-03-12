@@ -70,3 +70,5 @@ yarn-debug.log*
 /config/master.key
 /test/factories/
 /vendor/bundle
+log/development.log
+*.log
