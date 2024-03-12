@@ -1,0 +1,901 @@
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+2024-03-12T19:41:49-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Starting Delayed::Worker
+2024-03-12T19:41:49-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:41:54-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+Started GET "/" for ::1 at 2024-03-12 19:41:57 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.2) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+2024-03-12T19:41:59-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+Started GET "/" for ::1 at 2024-03-12 19:42:00 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.2) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-03-12 19:42:00 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.2) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+2024-03-12T19:42:04-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:42:10-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:42:15-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:42:20-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:42:25-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:42:30-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+2024-03-12T19:42:35-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:41013)] Error while reserving job(s): connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+  [1m[35m (592.7ms)[0m  [1m[35mCREATE DATABASE "library" ENCODING = 'unicode'[0m
+  [1m[35m (268.2ms)[0m  [1m[35mCREATE DATABASE "library_test" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+Started GET "/" for ::1 at 2024-03-12 19:45:06 -0300
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 12 pending migrations:
+
+db/migrate/20220201052415_devise_create_users.rb
+db/migrate/20220201063433_add_admin_to_users.rb
+db/migrate/20220201071755_add_stripe_customer_id_to_users.rb
+db/migrate/20220201073105_add_paying_customer_to_users.rb
+db/migrate/20220201105602_add_stripe_subscription_id_to_users.rb
+db/migrate/20220201110210_create_delayed_jobs.rb
+db/migrate/20231009160056_add_service_name_to_active_storage_blobs.active_storage.rb
+db/migrate/20231009160057_create_active_storage_variant_records.active_storage.rb
+db/migrate/20231009160058_remove_not_null_on_active_storage_blobs_checksum.active_storage.rb
+db/migrate/20231230205139_create_blog_posts.rb
+db/migrate/20231230212421_create_active_storage_tables.active_storage.rb
+db/migrate/20231230212422_create_action_text_tables.action_text.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2024-03-12 19:45:08 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5563979726711371980)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (8.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-03-12 22:45:08.884652', '2024-03-12 22:45:08.884658') RETURNING "key"[0m
+Migrating to DeviseCreateUsers (20220201052415)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220201052415') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAdminToUsers (20220201063433)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT FALSE[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220201063433') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStripeCustomerIdToUsers (20220201071755)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mALTER TABLE "users" ADD "stripe_customer_id" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220201071755') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPayingCustomerToUsers (20220201073105)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "paying_customer" boolean DEFAULT FALSE[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220201073105') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStripeSubscriptionIdToUsers (20220201105602)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" ADD "stripe_subscription_id" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220201105602') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDelayedJobs (20220201110210)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "delayed_jobs" ("id" bigserial primary key, "priority" integer DEFAULT 0 NOT NULL, "attempts" integer DEFAULT 0 NOT NULL, "handler" text NOT NULL, "last_error" text, "run_at" timestamp(6), "locked_at" timestamp(6), "failed_at" timestamp(6), "locked_by" character varying, "queue" character varying, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20220201110210') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20231009160056)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231009160056') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageVariantRecords (20231009160057)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231009160057') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveNotNullOnActiveStorageBlobsChecksum (20231009160058)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231009160058') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBlogPosts (20231230205139)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "title" character varying, "slug" character varying, "description" character varying, "draft" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231230205139') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20231230212421)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231230212421') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActionTextTables (20231230212422)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts" ("record_type", "record_id", "name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231230212422') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5563979726711371980)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-03-12 19:45:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 491)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1914)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 4406)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:45:11 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1237)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1479)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:46:17 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1235)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1472)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:47:20 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1235)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1472)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:47:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1237)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1478)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:47:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 2797)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 5742)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:47:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1686)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 3158)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for ::1 at 2024-03-12 19:47:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 3051)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 5344)
+
+
+  
+ActionView::Template::Error (Metamagic site not set. Please use `metamagic site: 'My Site'` to set it.):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= metamagic site: ENV['COMPANY_NAME'], title: [:site, :title], separator: " | " %>
+    5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+    6:     <%= csrf_meta_tags %>
+    7:     <%= csp_meta_tag %>
+  
+app/views/layouts/application.html.erb:4
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+2024-03-12T19:47:36-0300: [Worker(host:MacBook-Pro-de-Leonardo.local pid:43129)] Starting Delayed::Worker
+  [1m[36mDelayed::Job Load (3.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:47:36.981313', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:47:36.929312' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:06.929323')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started GET "/" for ::1 at 2024-03-12 19:47:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 623)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1449)
+  Rendered shared/_script_tags.html.erb (Duration: 0.1ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 243.9ms | Allocations: 211965)
+Completed 200 OK in 253ms (Views: 246.6ms | ActiveRecord: 0.0ms | Allocations: 216324)
+
+
+  [1m[36mDelayed::Job Load (8.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:47:42.014821', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:47:42.012757' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:12.012817')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (19.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:47:47.047796', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:47:47.046204' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:17.046262')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (9.8ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:47:52.096147', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:47:52.094278' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:22.094345')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:47:57.130233', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:47:57.127683' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:27.127758')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started GET "/login" for ::1 at 2024-03-12 19:47:58 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_devise_heading.html.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered devise/shared/_devise_sub_heading.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 226)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1949)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 783)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5523)
+Completed 200 OK in 87ms (Views: 7.3ms | ActiveRecord: 36.4ms | Allocations: 30327)
+
+
+Started POST "/login" for ::1 at 2024-03-12 19:48:01 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"allan@subbase.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "allan@subbase.io"], ["LIMIT", 1]]
+  [1m[36mDelayed::Job Load (2.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:02.146614', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:02.146043' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:32.146055')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Completed 401 Unauthorized in 363ms (ActiveRecord: 7.6ms | Allocations: 6519)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"allan@subbase.io", "password"=>"[FILTERED]"}}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_devise_heading.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered devise/shared/_devise_sub_heading.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 446)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 721)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3897)
+Completed 200 OK in 264ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 4483)
+
+
+Started GET "/" for ::1 at 2024-03-12 19:48:05 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 112)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 770)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3874)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4136)
+
+
+  [1m[36mDelayed::Job Load (2.6ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:07.167909', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:07.166866' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:37.166905')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:12.193006', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:12.191257' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:42.191275')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:17.220011', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:17.218654' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:47.218703')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (8.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:22.250031', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:22.248300' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:52.248357')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (8.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:27.276324', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:27.274852' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:27:57.274911')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:32.316636', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:32.312089' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:02.312387')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:37.343298', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:37.342388' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:07.342417')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:42.366571', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:42.364781' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:12.364853')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:47.399325', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:47.397930' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:17.397980')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:52.431607', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:52.430178' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:22.430233')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (17.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:48:57.460583', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:48:57.459170' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:27.459228')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:02.498244', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:02.496945' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:32.496994')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:07.538548', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:07.533311' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:37.533584')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (6.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:12.569041', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:12.567026' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:42.567087')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (10.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:17.607109', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:17.599441' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:47.599500')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (6.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:22.651168', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:22.644935' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:52.645182')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:27.684599', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:27.683243' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:28:57.683291')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (2.6ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:32.710103', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:32.708495' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:02.708554')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.8ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:37.735849', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:37.734335' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:07.734385')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (8.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:42.765225', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:42.763747' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:12.763808')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (1.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:47.864520', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:47.864192' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:17.864204')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (2.8ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:52.890453', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:52.888890' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:22.888945')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (8.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:49:57.916098', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:49:57.914585' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:27.914639')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (14.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:02.953300', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:02.950436' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:32.950524')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:07.996034', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:07.994398' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:37.994453')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (8.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:13.024979', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:13.023305' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:43.023369')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (19.6ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:18.061290', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:18.057960' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:48.058060')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.6ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:23.116687', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:23.112998' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:53.113083')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (15.8ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:28.138512', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:28.137865' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:29:58.137887')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Downloads/speedrail-master/config/environment.rb:5)
+  [1m[36mUser Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mDelayed::Job Load (9.6ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:33.170071', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:33.169189' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:03.169222')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started GET "/signup" for ::1 at 2024-03-12 19:50:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_devise_heading.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered devise/shared/_devise_sub_heading.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 752)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 744)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4202)
+Completed 200 OK in 25ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5170)
+
+
+  [1m[36mDelayed::Job Load (7.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:38.214321', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:38.213417' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:08.213455')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started POST "/" for ::1 at 2024-03-12 19:50:38 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"allan@subbase.io", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (5.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "allan@subbase.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (6.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "admin", "stripe_customer_id", "paying_customer", "stripe_subscription_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "allan@subbase.io"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-03-12 22:50:38.736090"], ["updated_at", "2024-03-12 22:50:38.736090"], ["admin", false], ["stripe_customer_id", nil], ["paying_customer", false], ["stripe_subscription_id", nil]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering mailers/user_mailer/welcome.html.erb within layouts/mailer
+  Rendered mailers/user_mailer/welcome.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 173)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.4ms | Allocations: 390)
+UserMailer#welcome: processed outbound mail in 9.1ms
+Delivered mail 65f0dc3ed0295_a8774aec808be@MacBook-Pro-de-Leonardo.local.mail (1582.4ms)
+Date: Tue, 12 Mar 2024 19:50:38 -0300
+From: Support Team <support@speedrail.com>
+To: allan@subbase.io
+Message-ID: <65f0dc3ed0295_a8774aec808be@MacBook-Pro-de-Leonardo.local.mail>
+Subject: welcome to Leonardo Zappani!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p>hey there,</p>
+
+<p>welcome to Leonardo Zappani! let us know if you need any help.</p>
+
+<p>cheers,<br><a href="http://localhost:3000">Leonardo Zappani</a></p>
+
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/subscribe
+Completed 302 Found in 2006ms (ActiveRecord: 40.8ms | Allocations: 81138)
+
+
+Started GET "/subscribe" for ::1 at 2024-03-12 19:50:40 -0300
+Processing by SubscribeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering subscribe/index.html.erb within layouts/application
+  Rendered shared/_heading.html.erb (Duration: 0.2ms | Allocations: 148)
+  Rendered subscribe/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 473)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 751)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3981)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 6073)
+
+
+  [1m[36mDelayed::Job Load (6.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:43.244157', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:43.242581' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:13.242602')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:48.272473', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:48.271232' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:18.271398')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (1.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:53.294456', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:53.292507' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:23.292591')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started GET "/dashboard" for ::1 at 2024-03-12 19:50:54 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered shared/_heading.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 186)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 751)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3660)
+Completed 200 OK in 24ms (Views: 5.6ms | ActiveRecord: 5.9ms | Allocations: 5645)
+
+
+Started GET "/blog" for ::1 at 2024-03-12 19:50:55 -0300
+Processing by BlogPostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog_posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.erb:15
+  [1m[36mBlogPost Load (4.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."draft" = $1 ORDER BY "blog_posts"."created_at" ASC[0m  [["draft", false]]
+  ↳ app/views/blog_posts/index.html.erb:38
+  Rendered blog_posts/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1946)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 742)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5456)
+Completed 200 OK in 52ms (Views: 8.4ms | ActiveRecord: 18.2ms | Allocations: 17162)
+
+
+  [1m[36mDelayed::Job Load (4.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:50:58.317260', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:50:58.315733' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:28.315752')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started GET "/dashboard" for ::1 at 2024-03-12 19:51:00 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered shared/_heading.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 81)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 749)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 3546)
+Completed 200 OK in 31ms (Views: 21.5ms | ActiveRecord: 0.9ms | Allocations: 5258)
+
+
+Started GET "/account" for ::1 at 2024-03-12 19:51:01 -0300
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering account/index.html.erb within layouts/application
+  Rendered shared/_heading.html.erb (Duration: 0.2ms | Allocations: 143)
+  Rendered account/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 912)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 727)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4351)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 1.6ms | Allocations: 6342)
+
+
+  [1m[36mDelayed::Job Load (4.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:03.336831', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:03.335310' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:33.335364')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:08.368112', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:08.365241' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:38.365294')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (1.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:13.395683', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:13.395070' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:43.395090')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (6.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:18.417938', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:18.416196' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:48.416256')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+Started GET "/blog" for ::1 at 2024-03-12 19:51:19 -0300
+Processing by BlogPostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog_posts/index.html.erb within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.erb:15
+  [1m[36mBlogPost Load (2.9ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."draft" = $1 ORDER BY "blog_posts"."created_at" ASC[0m  [["draft", false]]
+  ↳ app/views/blog_posts/index.html.erb:38
+  Rendered blog_posts/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 1416)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 736)
+  Rendered shared/_script_tags.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 4903)
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 6.1ms | Allocations: 5295)
+
+
+  [1m[36mDelayed::Job Load (5.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:23.453455', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:23.450637' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:53.450768')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.8ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:28.483484', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:28.481427' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:30:58.481469')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:33.520951', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:33.518864' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:03.518936')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:38.549903', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:38.548620' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:08.548666')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:43.593890', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:43.590918' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:13.590962')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:48.629205', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:48.627810' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:18.627868')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:53.677378', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:53.676036' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:23.676090')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:51:58.710827', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:51:58.709144' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:28.709208')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (17.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:03.738936', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:03.738388' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:33.738406')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (11.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:08.791260', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:08.789442' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:38.789507')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:13.821791', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:13.820343' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:43.820365')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (6.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:18.860444', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:18.858972' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:48.859204')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:23.893056', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:23.890657' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:53.890699')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (9.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:28.927991', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:28.925910' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:31:58.925953')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:33.962277', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:33.960818' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:03.960953')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (13.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:39.008593', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:38.993403' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:08.993468')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (12.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:44.047799', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:44.043745' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:14.043870')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (11.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:49.091952', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:49.091217' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:19.091241')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.5ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:54.145295', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:54.143206' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:24.143249')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:52:59.180771', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:52:59.177250' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:29.177340')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:04.201547', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:04.200940' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:34.200958')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (16.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:09.229369', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:09.225790' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:39.225926')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.1ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:14.280053', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:14.278986' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:44.279023')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:19.296811', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:19.296532' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:49.296543')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:24.337534', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:24.331998' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:54.332190')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (2.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:29.373525', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:29.372724' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:32:59.372750')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:34.397648', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:34.396386' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:04.396439')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (2.3ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:39.424490', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:39.422999' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:09.423023')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:44.445254', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:44.444382' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:14.444423')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:49.471993', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:49.470671' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:19.470717')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (6.4ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:54.503833', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:54.502399' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:24.502453')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.0ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:53:59.531827', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:53:59.529928' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:29.529982')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (7.7ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:54:04.565734', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:54:04.563252' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:34.563340')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (3.9ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:54:09.598902', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:54:09.597206' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:39.597247')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (4.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:54:14.639409', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:54:14.635895' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:44.635939')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (16.8ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:54:19.664699', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:54:19.662723' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:49.662784')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Load (5.2ms)[0m  [1m[37mUPDATE "delayed_jobs" SET locked_at = '2024-03-12 22:54:24.698861', locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129' WHERE ctid = ANY (ARRAY (SELECT ctid FROM "delayed_jobs" WHERE (((run_at <= '2024-03-12 22:54:24.698235' AND (locked_at IS NULL OR locked_at < '2024-03-12 22:33:54.698262')) OR locked_by = 'host:MacBook-Pro-de-Leonardo.local pid:43129') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5 FOR UPDATE SKIP LOCKED)) RETURNING *[0m
+  [1m[36mDelayed::Job Update All (0.7ms)[0m  [1m[33mUPDATE "delayed_jobs" SET "locked_by" = $1, "locked_at" = $2 WHERE "delayed_jobs"."locked_by" = $3[0m  [["locked_by", nil], ["locked_at", nil], ["locked_by", "host:MacBook-Pro-de-Leonardo.local pid:43129"]]
