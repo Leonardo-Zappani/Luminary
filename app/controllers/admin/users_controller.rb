@@ -6,7 +6,7 @@ class Admin::UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    redirect_to edit_admin_user_path(id: @user.id), notice: 'User updated successfully.'
+    redirect_to edit_admin_user_path(id: @user.id), notice: 'Usuário atualizado com sucesso!'
   end
 
   def destroy
