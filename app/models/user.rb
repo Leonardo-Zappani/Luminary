@@ -36,4 +36,12 @@ class User < ApplicationRecord
   def admin?
     permissions.include?('admin')
   end
+
+  def role
+    return 'Admin' if admin?
+
+    return 'Avaliador' if can_review?
+
+    'Autor'
+  end
 end
