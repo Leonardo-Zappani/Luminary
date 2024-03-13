@@ -1043,3 +1043,4 @@ Migrating to AddUserName (20240313000604)
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/leonardozappani/Documents/web2/Luminary/config/environment.rb:5)
   [1m[36mUser Update All (2.8ms)[0m  [1m[33mUPDATE "users" SET "name" = $1[0m  [["name", "Jorge"]]
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
