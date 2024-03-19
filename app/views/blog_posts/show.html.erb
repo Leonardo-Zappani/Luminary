@@ -4,7 +4,7 @@
   <main class="grow">
     <section>
       <div class="mx-auto max-w-2xl px-4 lg:px-8">
-        <%= link_to "← Back to all articles", blog_posts_path, class:"hover:opacity-75 mr-1 w-fit font-semibold" %>
+        <%= link_to "← Voltar para artigos", blog_posts_path, class:"hover:opacity-75 mr-1 w-fit font-semibold" %>
         <article class="flex flex-col items-start justify-between mt-4">
           <div class="relative w-full">
             <%= image_tag @blog_post.cover_image, class:"aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover" if @blog_post.cover_image.attached? %>
@@ -39,11 +39,6 @@
               <p class="text-base md:text-lg"><%= @blog_post.body %></p>
             </div>
           </article>
-          <div class="mx-auto mt-20 max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center">
-            <%= image_tag "founder-avatar.png", class:"mx-auto h-24 w-24 rounded-full" %>
-            <h2 class="mt-2 text-base font-semibold leading-7 tracking-tight text-gray-900">Your name</h3>
-            <p class="text-sm leading-6 text-gray-600">Founder of <%= ENV['COMPANY_NAME'] %></p>
-          </div>
         </div>
       </section>
     </main>
