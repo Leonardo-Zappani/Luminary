@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:logout]
-
-  def home
-    redirect_to('/login')
+  def redirect_to_login
+    redirect_to '/login'
   end
 
   def logout
