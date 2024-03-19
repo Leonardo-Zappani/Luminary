@@ -1,12 +1,12 @@
 class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: %i[show edit update destroy]
-  before_action :require_admin!, only: %i[new edit create update destroy]
   # before_action :authenticate_user!, only: %i[new create edit update destroy]
 
   # GET /blog_posts
   def index
-    @blog_posts = BlogPost.where(draft: false).order(created_at: :asc)
-    @drafts = BlogPost.where(draft: true).order(created_at: :desc)
+    redirect_to admin_dashboard_index_path if current_user&.admin?
+
+    @blog_posts = BlogPost.all.order(created_at: :asc)
   end
 
   # GET /blog_posts/slug
@@ -58,11 +58,5 @@ class BlogPostsController < ApplicationController
   # Only allow a list of trusted parameters through, but add :body, and use slug instead of id in the URL.
   def blog_post_params
     params.require(:blog_post).permit(:title, :slug, :description, :body, :cover_image, :draft)
-  end
-
-  def require_admin!
-    unless current_user&.admin?
-      redirect_to root_path, alert: "You are not authorized to view this page."
-    end
   end
 end

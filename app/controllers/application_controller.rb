@@ -5,10 +5,6 @@ class ApplicationController < ActionController::Base
     current_user.admin? ? dashboard_index_path : blog_posts_path
   end
 
-  def maybe_skip_onboarding
-    redirect_to dashboard_index_path, notice: "You're already subscribed" if current_user.finished_onboarding?
-  end
-
   # whitelist extra User model params by uncommenting below and adding User attrs as keys
   # def configure_permitted_parameters
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
