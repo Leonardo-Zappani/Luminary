@@ -3,7 +3,7 @@
 
     <%= link_to blog_post_path(blog_post) do %>
 
-    <div class="relative w-full">
+    <div  class="relative w-full">
       <%= image_tag blog_post.cover_image, class:"aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover" if blog_post.cover_image.attached? %>
       <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
     </div>
@@ -20,4 +20,9 @@
 
     <% end %>
   </article>
+      <% if current_user&.can_review? && blog_post.draft %>
+        <div class="mt-8 mx-auto max-w-fit">
+          <%= link_to 'Approve', approve_blog_post_path(blog_post.id), method: :post, remote: true, class: "group relative w-full flex justify-center py-2.5 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none" %>
+        </div>
+      <% end %>
 </div>
