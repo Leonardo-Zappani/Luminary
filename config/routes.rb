@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/blog/publish/:id' => 'blog_posts#publish', as: 'publish_blog_post'
   get '/artigos' => 'blog_posts#artigos', as: 'artigos'
   get '/review' => 'blog_posts#review', as: 'review'
+  get '/write' => 'blog_posts#write', as: 'write'
 
   # admin panels
   authenticated :user, ->(user) { user.admin? } do
