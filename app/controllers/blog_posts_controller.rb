@@ -13,6 +13,10 @@ class BlogPostsController < ApplicationController
     @blog_posts = BlogPost.all.order(created_at: :asc).where(draft: false)
   end
 
+  def review
+    @blog_posts = BlogPost.all.order(created_at: :asc).where(reviewer: current_user.name).where(draft: true)
+  end
+
   # GET /blog_posts/slug
   def show; end
 
@@ -27,6 +31,18 @@ class BlogPostsController < ApplicationController
   def approve
     @blog_post = BlogPost.find(params[:id])
     @blog_post.update(draft: false)
+    redirect_to blog_posts_path
+  end
+
+  def publish
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.update(published: true)
+    redirect_to admin_dashboard_index_path
+  end
+
+  def assign
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.update(reviewer: params[:name])
     redirect_to blog_posts_path
   end
 
@@ -67,6 +83,6 @@ class BlogPostsController < ApplicationController
 
   # Only allow a list of trusted parameters through, but add :body, and use slug instead of id in the URL.
   def blog_post_params
-    params.require(:blog_post).permit(:title, :slug, :description, :body, :cover_image, :draft)
+    params.require(:blog_post).permit(:title, :slug, :description, :body, :cover_image, :draft, :name)
   end
 end
