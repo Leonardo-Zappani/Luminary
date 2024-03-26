@@ -4,9 +4,7 @@ class BlogPostsController < ApplicationController
 
   # GET /blog_posts
   def index
-    redirect_to admin_dashboard_index_path if current_user&.admin?
-
-    @blog_posts = BlogPost.all.order(created_at: :asc).where(published: true)
+   @blog_posts = BlogPost.all.order(created_at: :asc).where(published: true)
   end
 
   def artigos

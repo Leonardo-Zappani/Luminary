@@ -9,6 +9,14 @@ class Admin::UsersController < ApplicationController
     redirect_to edit_admin_user_path(id: @user.id), notice: 'Usuário atualizado com sucesso!'
   end
 
+  def invite
+    email = params[:email]
+    name = params[:name]
+
+    User.create!(email: email, name: name)
+    redirect_to admin_dashboard_index_path, notice: "Usuario '#{email}' foi convidado."
+  end
+
   def destroy
     email = @user.email
     DestroyUser.new(@user).call

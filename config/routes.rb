@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get '/artigos' => 'blog_posts#artigos', as: 'artigos'
   get '/review' => 'blog_posts#review', as: 'review'
   get '/write' => 'blog_posts#write', as: 'write'
+  post '/invite' => 'admin/users#invite', as: 'invite'
 
   # admin panels
   authenticated :user, ->(user) { user.admin? } do
