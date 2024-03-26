@@ -6,7 +6,7 @@ class BlogPostsController < ApplicationController
   def index
     redirect_to admin_dashboard_index_path if current_user&.admin?
 
-    @blog_posts = BlogPost.all.order(created_at: :asc).where(draft: true)
+    @blog_posts = BlogPost.all.order(created_at: :asc).where(published: true)
   end
 
   def artigos
@@ -15,6 +15,10 @@ class BlogPostsController < ApplicationController
 
   def review
     @blog_posts = BlogPost.all.order(created_at: :asc).where(reviewer: current_user.name).where(draft: true)
+  end
+
+  def write
+    @blog_posts = BlogPost.all.order(created_at: :asc).where(draft: true, published: false)
   end
 
   # GET /blog_posts/slug
@@ -83,6 +87,6 @@ class BlogPostsController < ApplicationController
 
   # Only allow a list of trusted parameters through, but add :body, and use slug instead of id in the URL.
   def blog_post_params
-    params.require(:blog_post).permit(:title, :slug, :description, :body, :cover_image, :draft, :name)
+    params.require(:blog_post).permit(:title, :slug, :description, :body, :cover_image, :draft, :name, :reviewer)
   end
 end
