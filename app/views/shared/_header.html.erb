@@ -18,10 +18,11 @@
     <div id="main-nav" class="w-full flex-grow sm:flex text-right sm:w-auto hidden" data-header-target="mainNav">
       <div class="text-sm sm:flex-grow">
         <%= link_to 'Escrever', blog_posts_path, class: nav_link_classes('blog') if current_user&.can_create? %>
+        <%= link_to 'Artigos', artigos_path, class: nav_link_classes('blog') unless current_user&.can_create? %>
         <% if current_user %>
           <%= link_to 'Gerenciar', admin_dashboard_index_path, class: nav_link_classes('admin/dashboard') if current_user&.admin? %>
-          <% if current_user&.can_approve? %>
-            <%= link_to 'Avaliar', dashboard_index_path, class: nav_link_classes('dashboard') %>
+          <% if current_user&.can_review? %>
+            <%= link_to 'Avaliar', blog_posts_path, class: nav_link_classes('dashboard') %>
           <% end %>
           <%= link_to 'Minha conta', account_index_path, class: nav_link_classes('account') %>
           <%= link_to 'Sair', logout_path, class: nav_link_classes %>
