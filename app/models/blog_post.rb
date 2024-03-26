@@ -1,5 +1,6 @@
 class BlogPost < ApplicationRecord
   has_one_attached :cover_image
+  after_create :update_draft_state
   has_rich_text :body
   validates :slug, uniqueness: true
   before_validation :generate_unique_slug
@@ -10,6 +11,10 @@ class BlogPost < ApplicationRecord
   end
 
   private
+
+  def update_draft_state
+    update_columns(draft: true)
+  end
 
   def generate_unique_slug
     if new_record? || slug_changed?
