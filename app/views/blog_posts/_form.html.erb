@@ -54,6 +54,11 @@
               </div>
             </div>
 
+            <div class="sm:col-span-3">
+              <%= form.label :avaliador, class: "block text-sm font-medium text-gray-700" %>
+              <%= form.select :reviewer, User.reviewers.all.map { |user| [user.name, user.name] }, { prompt: 'Selecionar avaliador' }, {class: "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none sm:text-sm rounded-md" } %>
+            </div>
+
             <div class="field relative border rounded-lg min-h-[175px] border-gray-300 group">
               <%= form.rich_text_area :body, placeholder: "Escreva seu artigo aqui...", required: true, class:"group-focus:ring-gray-500 group-focus:border-gray-500 prose pb-5" %>
             </div>
