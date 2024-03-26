@@ -20,7 +20,10 @@ Rails.application.routes.draw do
   end
 
   get '/blog/approve/:id' => 'blog_posts#approve', as: 'approve_blog_post'
+  get '/blog/assign/:id' => 'blog_posts#assign', as: 'assign_blog_post'
+  get '/blog/publish/:id' => 'blog_posts#publish', as: 'publish_blog_post'
   get '/artigos' => 'blog_posts#artigos', as: 'artigos'
+  get '/review' => 'blog_posts#review', as: 'review'
 
   # admin panels
   authenticated :user, ->(user) { user.admin? } do

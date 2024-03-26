@@ -4,6 +4,7 @@ class User < ApplicationRecord
   include Billable
 
   scope :subscribed, -> { where.not(stripe_subscription_id: [nil, '']) }
+  scope :reviewers, -> { where('permissions @> ARRAY[?]::varchar[]', ['review']) }
 
   def can_approve?
     permissions.include?('approve') || admin?
