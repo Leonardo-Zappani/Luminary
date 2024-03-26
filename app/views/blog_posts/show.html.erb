@@ -10,24 +10,41 @@
             <%= image_tag @blog_post.cover_image, class:"aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover" if @blog_post.cover_image.attached? %>
             <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
           </div>
-          <% if current_user&.admin? %>
+          <% if current_user&.admin? || current_user&.can_create? %>
             <div class="mx-auto mt-4">
               <div class="flex space-x-2 my-2 mx-auto justify-center items-center">
                 <%= link_to edit_blog_post_path(@blog_post.slug), class:"shrink-0 mt-4 md:mt-0 inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" do %>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -ml-1 mr-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
-                  Edit
+                  Editar
                 <% end %>
                 <%= button_to @blog_post.slug, method: :delete, class:"shrink-0 mt-4 md:mt-0 inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" do %> <!-- Delete button -->
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -ml-1 mr-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd"></path>
                   </svg>
-                  Delete
+                  Deletar
                 <% end %>
               </div>
             </div>
           <% end %>
+              <% if current_user&.admin? %>
+                <div class="mx-auto mt-4">
+                  <div class="flex space-x-2 my-2 mx-auto justify-center items-center">
+                    <div class="mt-8 mx-auto max-w-fit">
+                      <%= link_to 'Publicar', publish_blog_post_path(@blog_post.id), method: :post, remote: true, class: "group relative w-full flex justify-center py-2.5 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none" %>
+                    </div>
+                    <div class="mt-8 mx-auto max-w-fit">
+                      <%= form_with url: assign_blog_post_path(@blog_post.id), method: :get, local: true do |form| %>
+                        <div class="field">
+                          <%= form.select :name, User.reviewers.all.map { |user| [user.name, user.name] }, { prompt: 'Selecionar avaliador' }, { onchange: 'this.form.submit();', class: "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none sm:text-sm rounded-md" } %>
+                        </div>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+
+              <% end %>
           <div class="w-full prose prose-lg">
             <div class="group relative">
               <div class="text-xs mx-auto text-center w-full mb-6 mt-12">
