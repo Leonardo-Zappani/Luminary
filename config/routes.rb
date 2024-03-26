@@ -19,6 +19,9 @@ Rails.application.routes.draw do
     get "/#{page}", to: "pages##{page}", as: page.gsub('-', '_').to_s
   end
 
+  get '/blog/approve/:id' => 'blog_posts#approve', as: 'approve_blog_post'
+  get '/artigos' => 'blog_posts#artigos', as: 'artigos'
+
   # admin panels
   authenticated :user, ->(user) { user.admin? } do
     namespace :admin do
