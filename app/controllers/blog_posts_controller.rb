@@ -6,7 +6,11 @@ class BlogPostsController < ApplicationController
   def index
     redirect_to admin_dashboard_index_path if current_user&.admin?
 
-    @blog_posts = BlogPost.all.order(created_at: :asc)
+    @blog_posts = BlogPost.all.order(created_at: :asc).where(draft: true)
+  end
+
+  def artigos
+    @blog_posts = BlogPost.all.order(created_at: :asc).where(draft: false)
   end
 
   # GET /blog_posts/slug
@@ -19,6 +23,12 @@ class BlogPostsController < ApplicationController
 
   # GET /blog_posts/slug/edit
   def edit; end
+
+  def approve
+    @blog_post = BlogPost.find(params[:id])
+    @blog_post.update(draft: false)
+    redirect_to blog_posts_path
+  end
 
   # POST /blog_posts
   def create
