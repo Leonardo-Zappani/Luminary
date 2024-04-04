@@ -16,7 +16,19 @@ class BlogPostsController < ApplicationController
   end
 
   def write
-    @blog_posts = BlogPost.all.order(created_at: :asc).where(draft: true, published: false)
+    @blog_posts = BlogPost.all.order(created_at: :asc)
+  end
+
+  def review_grade
+    @blog_post = BlogPost.find(params[:id])
+    review_grades = @blog_post.review_grades
+    review_grades << params[:grade].to_i
+
+    weight_grade = @blog_post.weight_grade
+    weight_grade << params[:weight_grade].to_i
+    @blog_post.update(review_grades: review_grades, weight_grade: weight_grade)
+
+    redirect_to blog_posts_path
   end
 
   # GET /blog_posts/slug

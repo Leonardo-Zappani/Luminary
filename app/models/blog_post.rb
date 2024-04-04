@@ -10,6 +10,22 @@ class BlogPost < ApplicationRecord
     slug
   end
 
+  def grade
+    return 'Não avaliado' if review_grades.empty?
+
+    total = 0
+    reviewed = 0
+
+    review_grades.size.times do |i|
+      next if review_grades[i].zero?
+
+      total += review_grades[i] * weight_grade[i] || 1
+      reviewed += 1
+    end
+
+    total / reviewed
+  end
+
   private
 
   def update_draft_state
