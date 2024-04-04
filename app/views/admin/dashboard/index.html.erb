@@ -60,7 +60,7 @@
               Titulo
             </th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Descricao
+              Nota
             </th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Ação
@@ -83,7 +83,7 @@
                 <%= post.title.first(25) %>
               </td>
               <td class="px-6 py-4 whitespace-wrap text-sm text-gray-500">
-                <%= post.description.first(25) %>
+                <%= post.grade %>
               </td>
               <td class="px-6 py-4 whitespace-wrap text-sm text-gray-500">
                 <%= link_to 'Editar', "/blog/#{post.slug}", method: :delete, class: 'text-primary-500' %>
